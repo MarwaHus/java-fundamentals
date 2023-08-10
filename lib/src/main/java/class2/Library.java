@@ -36,6 +36,7 @@ public class Library {
         double average = (double)sum / arr.length;
         return average;
     }
+
     public static int[] getLowestAverageArray(int[][] arr) {
         int[] lowestAverageArray = null;
         double lowestAverage = Double.MAX_VALUE;
@@ -51,4 +52,5 @@ public class Library {
             }}
         return lowestAverageArray;
     }
+
 }

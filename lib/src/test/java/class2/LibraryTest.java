@@ -45,4 +45,5 @@ class LibraryTest {
         int[] result = sut.getLowestAverageArray(arr);
         Assertions.assertArrayEquals(expected, result);
     }
+
 }

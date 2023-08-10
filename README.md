@@ -3,5 +3,5 @@
 
 | Title        | Link                              |
 |--------------|-----------------------------------|
-| basic        |                                   |
+| basic        | [basics](./basics/basics.md)      |
 | basicLibrary | [basicLibrary](./basicLibrary.md) |
