@@ -33,6 +33,7 @@ public class Library {
         double average = (double)sum / arr.length;
         return average;
     }
+
     public static int[] getLowestAverageArray(int[][] arr) {
         int[] lowestAverageArray = null;
         double lowestAverage = Double.MAX_VALUE;
@@ -48,6 +49,7 @@ public class Library {
             }}
         return lowestAverageArray;
     }
+
     public static String analyze(int[][] data) {
         int minTemp = 999;
         int maxTemp = -999;
@@ -94,4 +96,5 @@ public class Library {
         System.out.println(winner);
         return winner;
     }
+
 }

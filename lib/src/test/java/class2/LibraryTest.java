@@ -46,6 +46,7 @@ class LibraryTest {
         int[] result = sut.getLowestAverageArray(arr);
         Assertions.assertArrayEquals(expected, result);
     }
+
     @Test
     void testAnalyze() {
         int[][] weeklyMonthTemperatures = {
@@ -66,4 +67,5 @@ class LibraryTest {
         assertEquals(expectedWinner, actualWinner);
 
     }
+
 }
