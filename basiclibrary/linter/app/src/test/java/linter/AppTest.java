@@ -11,37 +11,51 @@ class AppTest {
     App classUnderTest = new App();
 
     @Test
-    void testNoErrors() {
-        Path filePath = Paths.get("./app/src/test/resources/noerrors.js");
-        String errorMessage = classUnderTest.checkSemicolons(filePath);
-        assertEquals("", errorMessage);
+    void testNoErrors() throws IOException {
+        Path file = Path.of("./app/src/test/resources/noErrors.js");
+        String errors = classUnderTest.checkSemicolons(file);
+        String expected = "";
+        Assertions.assertEquals(expected, errors);
     }
 
     @Test
-    void testOneError() {
-        Path filePath = Paths.get("./app/src/test/resources/oneerror.js");
-        String errorMessage = classUnderTest.checkSemicolons(filePath);
-        assertEquals("", errorMessage);
+    void testOneError() throws IOException {
+        Path file = Path.of("./app/src/test/resources/oneError.js");
+        String errors = classUnderTest.checkSemicolons(file);
+        String expected = "Line 3: Missing semicolon.\n";
+        Assertions.assertEquals(expected, errors);
     }
 
     @Test
-    void testFewErrors() {
-        Path filePath = Paths.get("./app/src/test/resources/fewerrors.js");
-        String errorMessage = classUnderTest.checkSemicolons(filePath);
-        assertEquals("", errorMessage);
+    void testFewErrors() throws IOException {
+        Path file = Path.of("./app/src/test/resources/fewErrors.js");
+        String errors = classUnderTest.checkSemicolons(file);
+        String expected = "Line 3: Missing semicolon.\n"
+                + "Line 11: Missing semicolon.\n"
+                + "Line 16: Missing semicolon.\n"
+                + "Line 22: Missing semicolon.\n";
+        Assertions.assertEquals(expected, errors);
     }
 
     @Test
-    void testManyErrors() {
-        Path filePath = Paths.get("./app/src/test/resources/manyerrors.js");
-        String errorMessage = classUnderTest.checkSemicolons(filePath);
-        assertEquals("", errorMessage);
+    void testManyErrors() throws IOException {
+        Path file = Path.of("./app/src/test/resources/manyErrors.js");
+        String errors = classUnderTest.checkSemicolons(file);
+        String expected = "Line 3: Missing semicolon.\n"
+                + "Line 5: Missing semicolon.\n"
+                + "Line 11: Missing semicolon.\n"
+                + "Line 13: Missing semicolon.\n"
+                + "Line 15: Missing semicolon.\n"
+                + "Line 26: Missing semicolon.\n"
+                + "Line 28: Missing semicolon.";
+        Assertions.assertEquals(expected, errors);
     }
 
     @Test
-    void testEmptyFile() {
-        Path filePath = Paths.get("./app/src/test/resources/empty.js");
-        String errorMessage = classUnderTest.checkSemicolons(filePath);
-        assertEquals("", errorMessage);
+    void testEmptyFile() throws IOException {
+        Path file = Path.of("./app/src/test/resources/empty.js");
+        String errors = classUnderTest.checkSemicolons(file);
+        String expected = "";
+        Assertions.assertEquals(expected, errors);
     }
 }
