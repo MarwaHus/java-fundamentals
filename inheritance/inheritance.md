@@ -13,3 +13,4 @@ This lab Inheritance, Part 2 includes:
 * Theater class which has a name and a list of movies currently showing. It implements the Reviewable interface which allows for reviews to be added to the theater. The class has a list of reviews, which is initially empty, and the addReview method allows for a new review to be added to the list.
 * additional instance variable - "movie" - in the Review class. This instance variable allows users to specify which movie they saw when reviewing a theater, while not requiring it when reviewing a Restaurant or a Shop.
 The updated Shop and Theater classes have been updated to implement the modified Review interface. The addReview() methods have been updated in both classes to set the movie instance variable in the Review object if it is a Theater review.
+
