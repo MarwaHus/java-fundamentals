@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class Restaurant {
+public class Restaurant implements Reviewable {
     private String name;
-    int stars;
+    private int stars;
     private String priceCategory;
-    List<Review> reviews;
+    private List<Review> reviews;
 
     public Restaurant(String name, int stars, String priceCategory) {
         this.name = name;
@@ -29,9 +29,24 @@ public class Restaurant {
         }
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getStars() {
+        return stars;
+    }
+
+    public String getPriceCategory() {
+        return priceCategory;
+    }
+
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
     public String toString() {
         return name + " (" + stars + " stars, " + priceCategory + " price)";
     }
-
-
+}
 }

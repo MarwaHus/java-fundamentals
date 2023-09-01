@@ -2,10 +2,10 @@ package restaurant;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Theater implements reviewable {
+public class Theater implements Reviewable {
     private String name;
     private List<String> movies;
-    List<Review> reviews;
+    private List<Review> reviews;
 
     public Theater(String name) {
         this.name = name;
@@ -36,12 +36,11 @@ public class Theater implements reviewable {
         return movies;
     }
 
-    public String toString() {
-        return name + " - " + movies.toString();
+    public List<Review> getReviews() {
+        return reviews;
     }
 
-    @Override
-    public void reviewable(Review review) {
-        
+    public String toString() {
+        return name + " - " + movies.toString();
     }
 }

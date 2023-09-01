@@ -1,5 +1,5 @@
 package restaurant;
 
-public interface  reviewable {
-     void reviewable(Review review);
+public interface Reviewable {
+     void addReview(Review review);
 }

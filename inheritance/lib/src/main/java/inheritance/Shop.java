@@ -3,11 +3,11 @@ package restaurant;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Shop implements reviewable {
+public class Shop implements Reviewable {
     private String name;
     private String description;
     private int dollarSigns;
-    List<Review> reviews;
+    private List<Review> reviews;
 
     public Shop(String name, String description, int dollarSigns) {
         this.name = name;
@@ -35,12 +35,13 @@ public class Shop implements reviewable {
         return dollarSigns;
     }
 
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
     public String toString() {
         return name + " - " + description + " ($" + dollarSigns + ")";
     }
+}
 
-    @Override
-    public void reviewable(Review review) {
-
-    }
 }
