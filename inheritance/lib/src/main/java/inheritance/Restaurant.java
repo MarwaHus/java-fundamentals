@@ -1,7 +1,5 @@
-package restaurant;
-
+package inheritance;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class Restaurant implements Reviewable {
@@ -48,5 +46,4 @@ public class Restaurant implements Reviewable {
     public String toString() {
         return name + " (" + stars + " stars, " + priceCategory + " price)";
     }
-}
 }

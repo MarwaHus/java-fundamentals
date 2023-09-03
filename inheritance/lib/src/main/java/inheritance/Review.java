@@ -1,5 +1,5 @@
-package restaurant;
-import  restaurant.Restaurant;
+package inheritance;
+//import  restaurant.Restaurant;
 public class Review {
     private String body;
     private String author;
