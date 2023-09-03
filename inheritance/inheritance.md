@@ -14,3 +14,5 @@ This lab Inheritance, Part 2 includes:
 * additional instance variable - "movie" - in the Review class. This instance variable allows users to specify which movie they saw when reviewing a theater, while not requiring it when reviewing a Restaurant or a Shop.
 The updated Shop and Theater classes have been updated to implement the modified Review interface. The addReview() methods have been updated in both classes to set the movie instance variable in the Review object if it is a Theater review.
 
+### Test cases:
+![](lab7.PNG)
